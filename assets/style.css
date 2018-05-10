@@ -1,0 +1,395 @@
+/*colors: #E8DDCB,
+RED #C44D58,
+LIGHT GREEN #9DE0AD,
+MEDIUM BLUE #45ADA8,
+DARK BLUE #547980,
+TAUPE   #E8DDCB,
+DARK GREY#594F4F,
+*/
+@font-face {
+    font-family: 'wendy_lpbold';
+    src: url('wendy_lp_bold-webfont.woff2') format('woff2'),
+         url('wendy_lp_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  color: #594F4F !important;
+  font-family: 'Montserrat', sans-serif;
+}
+html{
+background-color: #35393e;
+background-image: url("images/test.png");
+}
+
+header{
+  background-image: url("images/weimaraner-puppy-dog-snout-97082.jpeg");
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #dcd5d2;
+  text-shadow: 1px 0px 10px #000;
+  background-color: transparent;
+}
+
+header img{
+  width: 400px;
+};
+
+.select-wrapper{
+  margin-top: 20px;
+}
+.input-field.col label{
+  font-size: x-large;
+
+
+}
+
+.fa-lg{
+  margin-top: 10px;
+}
+.input-field label:not(.label-icon).active{
+  font-size: x-large;
+
+}
+.container{
+  max-width: 970px;
+  margin: 0 auto;
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input-field input[type=search] {
+  padding: 0;
+  width: 100%;
+  font-size: large;
+}
+.input-field input[type=text]{
+  font-size: large;
+  padding-top:10px;
+}
+#search {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#searchCard{
+    width: 600px;
+    display: flex;
+  background-color: #f8f6f6;
+}
+
+#resultsPage {
+  display:none;
+
+
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#favoritesPage {
+  display:none;
+  /*height: 100vh;*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.results .item{
+  height:400px;
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: flex-start;
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+}
+
+
+.card .card-action {
+  margin:0;
+  padding:0;
+}
+
+.card .card-image {
+  height:300px;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#searchBox {
+  padding: 50px 40px 30px 40px;
+}
+.cardcontainer {
+  padding: 10px;
+  text-align: left;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+/*.cardcontainer .list .row{
+}
+*/
+/* List functionality */
+.list .cardlist {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.tinderesque .list .item {
+  display: none;
+}
+.tinderesque .list .current {
+  display: block;
+  padding: 20px;
+}
+
+/* Button designs */
+
+.no, .yes, .nopes, .yays {
+  display: none;
+}
+
+.tinderesque .no, .tinderesque .yes,
+.tinderesque .nopes, .tinderesque .yays {
+  display: inline-block;
+}
+
+.cardcontainer button {
+  background-color: #45ADA8;
+  border: none;
+  color: #fff;
+/*  border-radius: 50% 50%;*/
+  width: 200px;
+  height: 50px;
+  line-height: 30px;
+  margin: 0 .5em;
+  display: inline-block;
+ 
+}
+
+.cardcontainer button:hover {
+ box-shadow: 10px 10px 25px 5px rgb(29, 28, 26);
+}
+
+
+.cardcontainer button:focus {
+  outline: 0;
+  background-color: #9DE0AD;
+}
+.cardcontainer .no {
+  background: #c00;
+}
+.cardcontainer .no:focus {
+  outline: 0;
+  background: #f00;
+}
+
+.tinderesque .cardcontainer.yes .item {
+  -webkit-animation: yay 0.7s ease-out;
+  animation: yay 0.7s ease-out;
+}
+.tinderesque .cardcontainer.nope .item {
+  -webkit-animation: nope 0.7s ease-out;
+  animation: nope 0.7s ease-out;
+}
+.card.results{
+
+  width: 400px;
+  height: 500px;
+  margin-left: 20px;
+
+}
+
+body.tinderesque{
+  height: 100vh;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+#searchCard{
+  width: 100%;
+  display: flex;
+  box-shadow: 10px 10px 25px 5px rgb(29, 28, 26);
+    
+}
+.results{
+  box-shadow: 10px 10px 25px 5px  rgb(29, 28, 26);
+}
+div#search.row{
+  margin-bottom: 0;
+  width: 100%;
+}
+#favorited{
+  list-style-type: none;
+  display:flex;
+  flex-wrap: wrap;
+}
+.header.btn{
+  border-radius: 9px;
+  font-family: 'Oswald', sans-serif;
+  color: #dcd3ca;
+  text-decoration: none;
+  background-color: rgba(140, 170, 180, 0.74);
+
+}
+.header.btn:hover{
+  color: #fff;
+  
+}
+h1{
+  font-size: 40px;
+}
+h2{
+  font-size: 20px;
+}
+
+ .rotateButton {
+    position: absolute;
+    bottom: 2px;
+    right: 0;   
+
+  border-radius: 50% 50% !important;
+  width: 50px !important;
+  height: 50px !important;
+  line-height: 30px !important;
+  margin: 0 .5em !important;
+  display: inline-block !important; 
+}
+
+.btn-floating i {
+  line-height: 33px;
+}
+
+button{
+  background-color: rgba(126, 171, 186, 0.92) !important;
+  
+}
+
+button:hover{
+background-color: #9DE0AD !important;
+}
+
+#submit, #reset{
+ background-color: rgba(126, 171, 186, 0.92);
+ 
+}
+
+#submit:hover, #reset:hover{
+  background-color: #9DE0AD;
+}
+
+.card-title{
+  color: #594F4F !important;
+}
+button.no{
+  background-color: #C44D58 !important;
+  position: absolute;
+  bottom: 0;
+  right: 133px;
+}
+button.yes{
+
+  background-color: #9DE0AD !important;
+  position: absolute;
+  bottom: 0;
+  left: 153px;
+}
+
+#map {
+  height: 250px;
+  width: 100%;
+ }
+
+ footer img{
+  height:30px;
+  margin-left: 10px;
+} 
+footer{
+  position: fixed;
+  bottom:0 ;
+  
+}
+#size-row{
+  margin-bottom: 0px;
+}
+
+@keyframes yay {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes yay {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: rotate(40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+
+@keyframes nope {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(-40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes nope {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: rotate(-40deg) translateY(-80px);
+    opacity: 0;
+  }
+
+
+  #map-canvas {
+        height: 400px;
+        width: 100%;
+       }

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Furever</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  <!-- Compiled and minified CSS -->
+
+  <link rel="stylesheet" type="text/css" href="assets/materialize/css/materialize.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="assets/materialize/js/materialize.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
+
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <link rel='shortcut icon' type='image/x-icon' href='assets/images/favicon.ico'/>	
+  
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-105686828-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</head>
+<body>
+<header>
+
+	<h1>Welcome to</h1>
+	<img src="assets/images/furever_text_logo.png" alt="blerg">
+	<h2>Find you new best friend</h2>
+	<a class="header btn" href="#search">GET STARTED</a>
+</header>
+  <div class="container">
+	<div class="row" id="search">
+	  <div class="card col s12" id="searchCard">
+		<div class="card-content col s12" id="searchBox">  
+		  <form class="col s12">
+			  <div class="row">
+				  <div class="input-field col s12">
+				    <input placeholder="Ex: Austin, TX or 78701" id="location" type="search" class="validate">
+				    <label for="location">Location (required)</label>
+				  </div>
+			  </div>
+			  <div class="row">
+				  <div class="input-field col s12">
+				    <input placeholder="" id="breed" type="text" class="validate">
+				    <label for="breed">Breed</label>
+				  </div>
+			  </div>			  
+			  <div class="row">
+			    <div class="input-field col s12">
+			      <select multiple id="age">
+			        <option value="" disabled selected>Choose Age</option>
+			        <option value="Baby">Baby</option>
+			        <option value="Young">Young</option>
+			        <option value="Adult">Adult</option>
+			        <option value="Senior">Senior</option>
+			      </select>
+			      <label>Age</label>
+			    </div>
+			  </div>
+			  <div class="row">
+			    <div class="input-field col s12">
+			      <select multiple id="gender">
+			        <option value="" disabled selected>Choose Gender</option>
+			        <option value="M">Male</option>
+			        <option value="F">Female</option>
+			      </select>
+			      <label>Gender</label>
+			    </div>
+			  </div>
+			  <div class="row" id="size-row">
+			    <div class="input-field col s12">
+			      <select multiple id="size">
+			        <option value="" disabled selected>Choose Size</option>
+			        <option value="S">Small</option>
+			        <option value="M">Medium</option>
+			        <option value="L">Large</option>
+			        <option value="XL">Extra Large</option>
+			      </select>
+			      <label>Size</label>
+			    </div>
+			  </div>
+			  <div class="row">
+			    <button class="btn" type="submit" name="action" id="submit">Submit
+ 			    </button>  	
+			    <button class="btn" type="reset" name="action" id="reset">Reset
+ 			    </button> 		  	
+			  </div> 		  			  
+		  </form>
+		</div>  
+	  </div>
+	</div>
+	<div class="row" id="resultsPage">
+	  <div class="cardcontainer list row">
+	    <ul class="cardlist" id="cards">
+	    </ul>
+	   
+	    <button class="no"><i class='fa fa-heart-o fa-lg'></i></button>
+	    <button class="yes"><i class='fa fa-heart fa-lg'></i></button>
+	  </div>
+	  <div class="row">
+    	<button class="btn" type="submit" name="action" id="favorites">Favorites
+ 		</button>
+	    <button class="btn" type="reset" name="action" id="newSearch">New Search
+ 		</button>  
+ 	  </div>			 	  
+	</div>
+	<div class="row" id="favoritesPage">
+	  <div class="row" id="favorited">
+	  </div>
+	   <div class="row">
+	   <div id="map-canvas" style= "height: 400px; width: 500px"></div>
+	  </div>
+	  <div class="row">
+    	<button class="btn" type="submit" name="action" id="results">Results
+ 		</button>
+	    <button class="btn" type="reset" name="action" id="newSearch2">New Search
+ 		</button>  
+ 	  </div>	  
+	</div>
+  </div>
+  <script src="assets/app.js"></script>
+  <script src="assets/jqueryRotate.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcFlLmEH1GxF8D4ATl6N7bIIrnaZRpZh8&"></script>
+  <footer><img src="assets/images/furever_logo_medium_blue.png" alt="logo"></footer>
+
+
+
+
+</body>
+</html>
